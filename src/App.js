@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import NavigationBar from './components/NavigationBar.js';
+import ChooseEV from './components/chooseEV.js';
+import EVcompare from './components/comparison/EVcompare';
 
 function App() {
+  const [selectedOption, setSelectedOption] = useState('chooseEV'); // Set 'chooseEV' as the default selected option
+
+  const handleNavigationClick = (option) => {
+    setSelectedOption(option);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavigationBar onNavigationClick={handleNavigationClick} />
+      <div>
+        {selectedOption === 'chooseEV' && <ChooseEV />}
+        {selectedOption === 'compareEV' && <EVcompare />}
+        {/* Add other components here based on other navigation options */}
+      </div>
     </div>
   );
 }

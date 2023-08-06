@@ -1,0 +1,126 @@
+.body{
+  width: 100vw;
+}
+
+.searchContainer{
+    
+    margin-top: 35px;
+    width: 98%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: white;
+   
+}
+
+.input{
+  margin-right: 25px;
+  margin-left: 20px;
+}
+
+
+.resultContainer {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  overflow-x: auto; /* Add horizontal scroll when needed */
+}
+
+.modelDetailContainer {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  min-width: 300px; /* Set a minimum width for each element */
+  max-width: calc(50% - 20px); /* Limit maximum width to 50% of the container width minus margin */
+  flex-shrink: 0; /* Allow elements to shrink and not grow */
+}
+
+
+
+.modelDetailContainer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.modelDetailContainer p {
+  margin: 5px 0;
+}
+img{
+  max-height: 200px;
+  max-width: 300px;
+}
+@media (max-width: 1200px) {
+  .searchContainer {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+/* ButtonStyle.css */
+
+.custom-button {
+  background-color: #f8f8f8; /* Dark background color */
+  color: black; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+.custom-button:hover {
+  background-color: #555; /* Darken background color on hover */
+  color: #ffd700; /* Change text color on hover */
+}
+
+select{
+  background-color: #f8f8f8;
+  color: #333;
+
+}
+
+/* Apply custom styles to the select element */
+.selectDesign {
+  /* Remove default arrow and appearance */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Add your custom styling */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  color: #333;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Style the select dropdown arrow icon */
+select::after {
+  content: '\25BE'; /* Downward arrow character */
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #555;
+  pointer-events: none;
+}
+
+/* Apply styles when the select is focused or hovered */
+select:focus,
+select:hover {
+  border-color: #666;
+}
+
+/* Apply styles when an option is hovered */
+select option:hover {
+  background-color: #ddd;
+}
