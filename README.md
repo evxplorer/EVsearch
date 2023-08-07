@@ -17,6 +17,13 @@ Follow these steps to set up and run the project locally:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/ev-model-selector.git
+   git clone https://github.com/Farzzn/Electric_Vehicle.git
    cd ev-model-selector
+   
+2. Install the project dependencies:
+  ```bash
+    npm install
+3. Start the development server:
 
+  ```bash
+    npm start
