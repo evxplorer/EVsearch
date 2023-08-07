@@ -32,10 +32,26 @@ Welcome to the Electric Vehicle (EV) Model Selector, a web application that allo
 
     In the sheet, I selected Extenstion->AppScript. The will open up Google Sheets Appscript.
     On Appscript there are 4 rest APIs generated makes.gs, models.gs, output2.gs and forsearching2.gs. First three are for comparison part and last one is for searching part of the app. 
+    #ev search part
     forsearching.gs provides following API:
           https://script.google.com/macros/s/AKfycbweHn70wVoTs9yH52R3n0wlbbLKua88Ts8NwIHy-t3fGsGvSEpDWk-zTz8cb2NjXhoF/exec
-          This is used to fetch fetch sutiable vehicle for user query. In EX showroom price column of sheets, price values contain commas in between. So API will recogince this as string and we cant use this values for comparison. Also if we remove this commas and try to provide integer values to API, values without commas will be printed in application, This will reduce readability of app. SO I added two new columns Price Range Category and Driving Range Category. 
-          For 
+          This is used to fetch fetch sutiable vehicle for user query. In EX showroom price column of sheets, price values contain commas in between. So API will recogince this as string and we cant use this values for comparison. Also if we remove this commas and try to provide integer values to API, values without commas will be printed in application, This will reduce readability of app. So I added two new columns Price Range Category and Driving Range Category. By doing so i able to reduce no of line in code.
+          For Price Range Category 
+              Value 1 indicate price below 1L
+              Value 2 indicate Price between 1L-10L
+              Value 3 indicate price aove 10L
+          For Diving Range Category
+              Value 1 indicate Range below 200KM
+              value 2 indicte range 200-400km
+              value 3 indicte range above 400km
+  Now i used two react state to define user selected state of price range and driving range
+  const [selectedPriceRange, setSelectedPriceRange] = useState('');
+  const [selectedDrivingRange, setSelectedDrivingRange] = useState('');
+      Then i used a filter function in react to iterate through api and find values that matches with this state.     
+
+      #evcompare part
+        
+      
           
 
 
