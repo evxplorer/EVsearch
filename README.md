@@ -10,30 +10,33 @@ Welcome to the Electric Vehicle (EV) Model Selector, a web application that allo
 - Compare EV models for their Price, Driving Range etc.
   
 
-## Getting Started
+## Usage
 
-Follow these steps to set up and run the project locally:
+    Upon accessing the application, you'll be having a navigation bar that link to EVcompare and EVsearch with EVsearch is selected by defualt:
+    In EVsearch, one can search for evmodel with following constraint
+        Vehicle type
+        Price range
+        Driving range
 
-1. Clone the repository to your local machine:
+    After making your selections, click the "Submit" button.
 
-   ```bash
-   git clone https://github.com/Farzzn/Electric_Vehicle.git
-   cd ev-model-selector
-   
-2. Install the project dependencies:
-  ```bash
-    npm install
+    The application will display a list of filtered EV models that match your criteria, including details such as model name, type, price, battery information, driving range, and more.
 
-3. Start the development server:
-
-  ```bash
-    npm start
+   In EvCompare section, can be used to compare models for their Price, Range etc
 
 
 
+# Working
+    I used google sheets as database for project.
+    Sheet Link: https://docs.google.com/spreadsheets/d/1M1zOzXs7kiB1BsRRVdlY02Br3-4gnztzsCfsJ3_t2hk/edit#gid=717085733
 
-
-# Electric Vehicle (EV) Model Selector
+    In the sheet, I selected Extenstion->AppScript. The will open up Google Sheets Appscript.
+    On Appscript there are 4 rest APIs generated makes.gs, models.gs, output2.gs and forsearching2.gs. First three are for comparison part and last one is for searching part of the app. 
+    forsearching.gs provides following API:
+          https://script.google.com/macros/s/AKfycbweHn70wVoTs9yH52R3n0wlbbLKua88Ts8NwIHy-t3fGsGvSEpDWk-zTz8cb2NjXhoF/exec
+          This is used to fetch fetch sutiable vehicle for user query. In EX showroom price column of sheets, price values contain commas in between. So API will recogince this as string and we cant use this values for comparison. Also if we remove this commas and try to provide integer values to API, values without commas will be printed in application, This will reduce readability of app. SO I added two new columns Price Range Category and Driving Range Category. 
+          For 
+          
 
 
 
