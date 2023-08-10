@@ -83,7 +83,7 @@ const ChooseEV = () => {
                 Select Price Range
               </option>
               <option value='1'>Less than 1 Lakh</option>
-              <option value='2'>2 - 10 Lakhs</option>
+              <option value='2'>1 - 10 Lakhs</option>
               <option value='3'>Above 10 Lakhs</option>
             </select>
           </div>
