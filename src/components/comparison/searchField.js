@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './searchFieldStyle.css';
 
 const SearchField = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -44,30 +45,34 @@ const SearchField = () => {
     setSuggestions([]);
   };
 
-  return (
-    <div className="search-box">
-      <input
-        type="text"
-        placeholder="&#xF002; Search Models"
-        id="search"
-        name="search"
-        style={{ fontFamily: 'FontAwesome' }}
-        value={searchTerm}
-        onChange={handleInputChange}
-        onBlur={clearSuggestions} // Clear suggestions when the input loses focus
-      />
-      {/* Show suggestions as a custom suggestion menu */}
-      {suggestions.length > 0 && (
-        <div className="suggestion-menu">
-          {suggestions.map((suggestion, index) => (
-            <div key={index} className="suggestion-item">
-              {suggestion}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+return (
+  <div className="search-box" >
+    <input
+      type="text"
+      placeholder="&#xF002; Search Models"
+      id="search"
+      name="search"
+      style={{
+        fontFamily: 'FontAwesome',
+        width: '200px', // Adjust the width to your desired value
+        marginRight: '15px', // Add a right margin of 15px
+      }}
+      value={searchTerm}
+      onChange={handleInputChange}
+      onBlur={clearSuggestions}
+    />
+    {/* Show suggestions as a custom suggestion menu */}
+    {suggestions.length > 0 && (
+      <div className="suggestion-menu">
+        {suggestions.map((suggestion, index) => (
+          <div key={index} className="suggestion-item">
+            {suggestion}
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+);
 };
 
 export default SearchField;

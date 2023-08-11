@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './detials.css';
-import SearchField from './searchField';
+
 
 const VehicleForm = () => {
   const [selectedValues, setSelectedValues] = useState({
@@ -74,7 +74,7 @@ const VehicleForm = () => {
 
   return (
     <div className='container'>
-    <SearchField />
+    
       <select
         value={selectedValues.typesDropdown}
         onChange={handleTypeChange}
