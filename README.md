@@ -63,7 +63,17 @@ This part involves three API calls:
 
 These APIs collectively enable the comparison of EV models based on attributes like Price, Range, etc.
 ``
-    
+
+
+### Steps to add new vehicle data
+
+1. Fill google sheets row with vehicle values
+2. Make sure to fill Price range category and Driving range category with accoring to values mentioned above
+3. Save image of vehicle in public/images folder of the app 
+4. Make sure the name of vehicle is same as the name given in Model column of sheets
+   ie, Model name of vehicle is Revolt Bike in Google Sheets, then image should be saved as Revolt Bike.png
+           <img src={`./images/${model.model}.png`} alt={model.model} />
+            This is code used to fetch image
       
           
 
