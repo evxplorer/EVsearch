@@ -27,7 +27,7 @@ In the "EVcompare" section, you can compare models based on attributes like Pric
 - clone Repo
 - cd EVsearch
 - install dependencies, ie npm install
-- Start Project using npms start
+- Start Project using npm start
 
 ## Working
 
