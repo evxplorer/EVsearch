@@ -23,11 +23,11 @@ The application will display a list of filtered EV models that match your criter
 In the "EVcompare" section, you can compare models based on attributes like Price, Range, etc.
 
 ## Project Setup
-Install ReactJs
-clone Repo
-cd EVsearch
-install dependencies, ie npm install
-Start Project using npms start
+- Install ReactJs
+- clone Repo
+- cd EVsearch
+- install dependencies, ie npm install
+- Start Project using npms start
 
 ## Working
 
