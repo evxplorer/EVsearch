@@ -32,7 +32,7 @@ In the "EVcompare" section, you can compare models based on attributes like Pric
 ## Working
 
 I used Google Sheets as the database for this project.
-- [Google Sheets Link](https://docs.google.com/spreadsheets/d/1M1zOzXs7kiB1BsRRVdlY02Br3-4gnztzsCfsJ3_t2hk/edit#gid=717085733)
+
 
 In the Google Sheets document, I used Google Apps Script to generate 4 REST APIs: `makes.gs`, `models.gs`, `output2.gs`, and `forsearching2.gs`. The first three are used for the comparison part, and the last one is for the search functionality of the app.
 
