@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(82,92,135);
-    background: linear-gradient(90deg, rgba(82,92,135,1) 0%, rgba(49,114,164,1) 100%, rgb(4, 186, 222) 100%); 
+    background: #272829; 
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
