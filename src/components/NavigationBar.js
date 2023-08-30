@@ -11,26 +11,22 @@ const NavigationBar = ({ onNavigationClick }) => {
 
   return (
     <nav>
-      <ul>
-        <li>
+      <ul className='center-container'>
           <a
-            href="#"
+
             onClick={() => handleNavigationClick('chooseEV')}
             className={selectedTab === 'chooseEV' ? 'selected' : ''}
           >
-           <strong> EV Search </strong>
+           <button className='evsearchbtn'> EV Search </button>
            
            </a>
-        </li>
-        <li>
           <a
-            href="#"
+
             onClick={() => handleNavigationClick('compareEV')}
-            className={selectedTab === 'compareEV' ? 'selected' : ''}
+            className={selectedTab === 'comparebuttonEV' ? 'selected' : ''}
           >
-           <strong>  EV Compare</strong> 
+           <button className='evsearchbtn'>  EV Compare</button> 
           </a>
-        </li>
       </ul>
     </nav>
   );
